@@ -55,17 +55,19 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  void _cadastrar() {
-    setState(() {
-      _mostrarResumo = true;
-      _resumo =
-          'Produto: ${_nomeController.text.trim().isEmpty ? '-' : _nomeController.text.trim()}\n'
-          'Quantidade: ${_quantidade.round()}\n'
-          'Entrega: ${_tipoEntregaTexto(_tipoEntrega)}\n'
-          'Região: ${_regiao ?? '-'}\n'
-          'Aceite: ${_aceite ? 'Sim' : 'Não'}';
-    });
-  }
+void _cadastrar() {
+  final nome = _nomeController.text.trim();
+
+  setState(() {
+    _mostrarResumo = true;
+    _resumo =
+        'Produto: ${nome.isEmpty ? '-' : nome}\n'
+        'Quantidade: ${_quantidade.round()}\n'
+        'Entrega: ${_tipoEntregaTexto(_tipoEntrega)}\n'
+        'Região: ${_regiao ?? '-'}\n'
+        'Aceite: ${_aceite ? 'Sim' : 'Não'}';
+  });
+}
 
   @override
   void dispose() {

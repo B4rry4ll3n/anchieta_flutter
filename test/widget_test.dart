@@ -38,10 +38,10 @@ void main() {
     // Simula preenchimento completo
     await tester.enterText(find.byType(TextField), 'Produto X');
     await tester.tap(find.text('Cadastrar'));
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     // Valida se o resultado apareceu
-    expect(find.textContaining('Produto: Produto X'), findsWidgets, 
+    expect(find.textContaining('Produto: Produto X'), findsOneWidget, 
       reason: "O texto final não foi exibido na tela após clicar em Cadastrar!");
   });
 }

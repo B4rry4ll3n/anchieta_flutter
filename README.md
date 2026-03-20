@@ -1,6 +1,5 @@
 # Atividade Flutter - Cadastro de Produto
 
-## Identificação do aluno
 - **Nome:** ISAIAS NERI DA CONCEICAO JUNIOR  
 - **RA:** 2405536
 
@@ -22,8 +21,6 @@ No **Teste 5**, a validação com `find.textContaining('Produto X')` pode falhar
 1. no `TextField` (entrada do usuário);
 2. no resumo exibido após clicar em `Cadastrar`.
 
-Se o teste esperar `findsOneWidget`, pode ocorrer falha por encontrar mais de uma ocorrência.  
-A validação mais estável seria buscar um texto mais específico, como `Produto: Produto X`, ou aceitar múltiplas ocorrências quando apropriado.
 
 ## Execução
 ```bash
